@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gambling Games</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Gambling Games</h1>
+        
+        <!-- Player Coin Balance -->
+        <div class="balance">
+            <p>Coins: <span id="coin-balance">100</span></p>
+        </div>
+
+        <!-- Coin Flip Game -->
+        <div class="game" id="coin-flip">
+            <h2>Coin Flip Game</h2>
+            <p>Choose Heads or Tails and place your bet (1 coin per bet).</p>
+            <button onclick="flipCoin('heads')">Heads</button>
+            <button onclick="flipCoin('tails')">Tails</button>
+            
+            <!-- Coin Flip Animation -->
+            <div id="coin-animation" class="coin-animation">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Heads_or_tails_%28game%29.jpg" id="coin-img" alt="Coin">
+            </div>
+            
+            <p id="coin-result"></p>
+        </div>
+
+        <!-- Dice Roll Game -->
+        <div class="game" id="dice-roll">
+            <h2>Dice Roll Game</h2>
+            <p>Bet on the number (1-6) and see if you win (1 coin per bet).</p>
+            <input type="number" id="dice-bet" min="1" max="6" placeholder="Enter a number 1-6">
+            <button onclick="rollDice()">Roll Dice</button>
+
+            <!-- Dice Roll Animation -->
+            <div id="dice-animation" class="dice-animation">
+                <div id="dice-container">
+                    <div class="dice" id="dice-1">1</div>
+                    <div class="dice" id="dice-2">2</div>
+                    <div class="dice" id="dice-3">3</div>
+                    <div class="dice" id="dice-4">4</div>
+                    <div class="dice" id="dice-5">5</div>
+                    <div class="dice" id="dice-6">6</div>
+                </div>
+            </div>
+
+            <p id="dice-result"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
